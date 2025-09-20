@@ -7,6 +7,9 @@
 
 
 #Funktion som skapar tom dictionary
+from turtle import distance
+
+
 def new_board():
     return {}
 
@@ -68,7 +71,16 @@ def count(board, axis, index_value, piece):
         print("Incorrect input")
     return count
 
+def nearest_piece(board, col, row):
+    if not board:
+        return False
+    else:
+        for (col, row) in board.keys():
+
+
+
 #_______________________ Input _____________________________________________
 board = new_board()
 print(is_free(board, 500, 100))
 print(place_piece(board, 500, 100, "spelare1"))
+print(place_piece(board, 500, 100, "spelare2"))
